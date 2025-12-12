@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UCMS - Admin Events</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div id="notification-area" class="fixed top-4 right-4 z-50 space-y-2"></div>
+
+  <header class="fixed top-0 left-0 w-full bg-white shadow-lg z-20 p-4 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <div id="header-logo-container"></div>
+      <span class="text-xl font-bold text-gray-800">Event Management</span>
+    </div>
+    <div class="text-xs font-bold text-gray-600 flex items-center space-x-4">
+      <span id="user-info-display" class="p-1 px-3 bg-gray-200 rounded-full shadow text-sm"></span>
+      <button class="p-2 px-4 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 text-xs ucms-logout">LOGOUT</button>
+    </div>
+  </header>
+
+  <main class="container pt-24" id="admin-events-page">
+    <div class="ucms-content-card p-0 overflow-x-auto" style="max-width:none;">
+      <table class="ucms-table">
+        <thead>
+          <tr><th>EVENT NAME</th><th class="w-32">CLUB</th><th class="w-32">LOCATION</th><th class="w-24">DATE</th><th class="w-20">TIME</th><th>DESCRIPTION</th><th class="w-48">OPTION</th></tr>
+        </thead>
+        <tbody id="admin-events-tbody">
+          <tr><td colspan="7">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <div class="footer-spacer"></div>
+  <script src="../js/app.js"></script>
+</body>
+</html>
